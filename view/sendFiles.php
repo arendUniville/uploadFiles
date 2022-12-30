@@ -42,13 +42,13 @@
                 $pasta = "files/";
                 echo $hashName = uniqid();
 
-                $newNamePath = $hashName . "." . $extensao;
+                $hashNameWithExt = $hashName . "." . $extensao;
 
                 $isAllCorrect = move_uploaded_file($arquivo['tmp_name'], $pasta . $hashName . "." . $extensao);
 
                 if($isAllCorrect){
 
-                    echo "<p>Arquivo enviado com sucesso! Para acessá-lo, clique aqui: <a target='_blank' href='files/$newNamePath'> Clique aqui </a> </p>";
+                    echo "<p>Arquivo enviado com sucesso! Para acessá-lo, clique aqui: <a target='_blank' href='files/$hashNameWithExt'> Clique aqui </a> </p>";
 
                 }else{
 

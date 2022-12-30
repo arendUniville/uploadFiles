@@ -149,8 +149,8 @@ $sql_query = $mysqli->query("SELECT * FROM arquivos") or die($mysqli->error);
             ?>
                     <tr>
 
-                        <td> <img height='50' src='<?php $arquivo['pathDir']; ?>' alt=''> </td>
-                        <td> <?php echo $arquivo['pathDir']; ?> </td>
+                        <td> <img height='50' src='<?php echo $arquivo['pathDir']; ?>' alt=''> </td>
+                        <td> <?php echo $arquivo['originalFileName']; ?> </td>
                         <td> <?php echo date("d/m/Y H:i", strtotime($arquivo['uploadDate'])); ?> </td>
                         <td> <?php echo $arquivo['progressStatus']; ?> </td>
 
